@@ -5,7 +5,7 @@ sessionId: session-261111-193649-ds8k
 # Requirements
 
 ### Overview
-Scaffold the DGFolly npm-workspaces monorepo per SCAFFOLD.md and AGENTS.md: packages `ui`, `server`, `core`, each with `package.json` (type: module) and stub `index.js`. No features implemented.
+Scaffold the DGFolly npm-workspaces monorepo per SCAFFOLD.md and AGENTS.md: packages `ui`, `server`, `core`, each with `../../package.json` (type: module) and stub `index.js`. No features implemented.
 
 ### Out of scope
 Any real functionality, Express server logic, Vue app, Mongo access.
@@ -18,14 +18,14 @@ Any real functionality, Express server logic, Vue app, Mongo access.
 # Technical Design
 
 ### Layout
-- Root `package.json`: name `DGFolly`, private, type module, workspaces `packages/*`, devDeps `oxlint`, `tap`; scripts delegate to `Makefile`.
+- Root `../../package.json`: name `DGFolly`, private, type module, workspaces `packages/*`, devDeps `oxlint`, `tap`; scripts delegate to `Makefile`.
 - `Makefile`: targets install, lint (oxlint), test (tap).
-- `.oxlintrc.json` reflecting specs/LINTER.md (curly, semi-style via available rules, camelcase, no-unused-vars, require-await, complexity max 10 warn/20 error).
-- `packages/core`: deps check-types, dayjs; `index.js`, `README.md`, `tests/`.
-- `packages/server`: deps express, mongodb, check-types, @dasdgfolly/core workspace; `index.js`, `README.md`, `tests/`.
-- `packages/ui`: deps vue, bootstrap, check-types; `index.js`, `README.md`, `tests/`, `css/`, `assets/`, `lib/index.js`, `applications/disc/index.js`, `applications/meyers/index.js`.
+- `../../.oxlintrc.json` reflecting specs/LINTER.md (curly, semi-style via available rules, camelcase, no-unused-vars, require-await, complexity max 10 warn/20 error).
+- `../../packages/core`: deps check-types, dayjs; `index.js`, `README.md`, `tests/`.
+- `../../packages/server`: deps express, mongodb, check-types, @dasdgfolly/core workspace; `index.js`, `README.md`, `tests/`.
+- `../../packages/ui`: deps vue, bootstrap, check-types; `index.js`, `README.md`, `tests/`, `css/`, `assets/`, `lib/index.js`, `applications/disc/index.js`, `applications/meyers/index.js`.
 - Stub index.js files contain only module JSDoc and `export {};`.
-- `.gitignore` for node_modules. Run `npm install`.
+- `../../.gitignore` for node_modules. Run `npm install`.
 
 # Testing
 

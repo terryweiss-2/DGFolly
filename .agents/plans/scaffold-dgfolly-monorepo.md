@@ -21,12 +21,12 @@ Out: the DISC/Myers-Briggs logic, output definition, and the config/logger modul
 Repo holds only AGENTS.md, SCAFFOLD.md and specs/*. Nothing else exists.
 
 ### Proposed Changes
-- Root `package.json`: name `DGFolly`, `type: module`, `workspaces: [packages/*]`, devDeps: tap, oxlint; scripts delegate to Makefile.
-- `packages/core`: `package.json`, `index.js` (exports a version constant and a `check-types` helper), README.
-- `packages/server`: `src/app.js` (Express app, `helmet`-style headers, JSON limit, static serving of ui, disabled `x-powered-by`), `src/index.js` (listens, tracks connections via `server.on('connection')`; when count exceeds 20, logs and `process.exit(1)`), README. Exports `createApp()` and `startServer({port})` with check-types validation and JSDoc. Uses MongoDB driver as a dependency, not connected yet.
-- `packages/ui`: Vue 3 SPA with `index.html`, `main.js`, `App.vue`, folders `css/`, `applications/disc`, `applications/meyers`, `assets/`, `lib/`; Bootstrap and DayJS dependencies. Built or served statically by the server (build tool, e.g. Vite, pending approval).
+- Root `../../package.json`: name `DGFolly`, `type: module`, `workspaces: [packages/*]`, devDeps: tap, oxlint; scripts delegate to Makefile.
+- `../../packages/core`: `package.json`, `index.js` (exports a version constant and a `check-types` helper), README.
+- `../../packages/server`: `src/app.js` (Express app, `helmet`-style headers, JSON limit, static serving of ui, disabled `x-powered-by`), `src/index.js` (listens, tracks connections via `server.on('connection')`; when count exceeds 20, logs and `process.exit(1)`), README. Exports `createApp()` and `startServer({port})` with check-types validation and JSDoc. Uses MongoDB driver as a dependency, not connected yet.
+- `../../packages/ui`: Vue 3 SPA with `index.html`, `main.js`, `App.vue`, folders `css/`, `applications/disc`, `applications/meyers`, `assets/`, `lib/`; Bootstrap and DayJS dependencies. Built or served statically by the server (build tool, e.g. Vite, pending approval).
 - `Makefile`: `install`, `lint`, `test`, `run`, `build`.
-- `.oxlintrc.json` following specs/LINTER.md; `.gitignore`; root `README.md` with run instructions (Ubuntu/WSL).
+- `../../.oxlintrc.json` following specs/LINTER.md; `.gitignore`; root `README.md` with run instructions (Ubuntu/WSL).
 
 ### Risks
 - Connection-limit exit may trip on keep-alive sockets; count open sockets and decrement on close.
