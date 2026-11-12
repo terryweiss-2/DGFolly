@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "curly": "error",
+    "no-unused-vars": "error",
+    "require-await": "error",
+    "complexity": ["warn", 10]
+  }
+}

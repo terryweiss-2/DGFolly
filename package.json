@@ -1,0 +1,15 @@
+{
+  "name": "dgfolly",
+  "private": true,
+  "type": "module",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "install:all": "make install",
+    "lint": "make lint",
+    "test": "make test"
+  },
+  "devDependencies": {
+    "oxlint": "^1.0.0",
+    "tap": "^21.0.0"
+  }
+}

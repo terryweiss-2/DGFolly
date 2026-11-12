@@ -1,0 +1,11 @@
+{
+  "name": "@dasdgfolly/core",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "check-types": "^11.2.3",
+    "dayjs": "^1.11.13"
+  }
+}

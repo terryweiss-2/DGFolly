@@ -1,0 +1,13 @@
+{
+  "name": "@dasdgfolly/server",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "@dasdgfolly/core": "*",
+    "check-types": "^11.2.3",
+    "express": "^4.21.0",
+    "mongodb": "^6.10.0"
+  }
+}
